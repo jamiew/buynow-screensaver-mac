@@ -2,15 +2,14 @@
 
 A macOS recreation of the classic **BUY NOW** screensaver by [Ficus Kirkpatrick](http://toastycode.com/besavers/) for BeOS.
 
-Original screensaver from the BeOS screensaver collection. This is a tribute to [BeOS](https://en.wikipedia.org/wiki/BeOS), the multithreaded operating system developed by Be Inc. in the 1990s.
+It has a dark blue background and white text.
+
 
 ![Screenshot](screenshot.gif)
 
-## Features
-
-- Dark blue background with white "BUY NOW" text
-- Flashes on/off every second
-- Native macOS screensaver (.saver bundle)
+This is a tribute to [BeOS](https://en.wikipedia.org/wiki/BeOS), the pervasively multithreaded operating system from the 1990s.
+p
+It is a wonderful piece of computing history.
 
 ## Installation
 
