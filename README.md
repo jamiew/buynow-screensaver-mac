@@ -4,6 +4,8 @@ A macOS recreation of the classic **BUY NOW** screensaver by [Ficus Kirkpatrick]
 
 Original screensaver from the BeOS screensaver collection. This is a tribute to [BeOS](https://en.wikipedia.org/wiki/BeOS), the multithreaded operating system developed by Be Inc. in the 1990s.
 
+![Screenshot](screenshot.png)
+
 ## Features
 
 - Dark blue background with white "BUY NOW" text
@@ -12,33 +14,34 @@ Original screensaver from the BeOS screensaver collection. This is a tribute to 
 
 ## Installation
 
-### Option 1: Screensaver Only (Lightweight)
+### Download
 
-For users who just want the screensaver:
+**Quick install:** [Download BuyNow.saver.zip](https://github.com/yourusername/buy-now/releases) _(coming soon)_
+
+**Mac App Store:** _Coming soon_
+
+### How to Install
+
+1. Double-click `BuyNow.saver` (or download from Mac App Store when available)
+2. Open **System Settings**
+3. Go to **Wallpapers**
+4. Click the **Screen Saver** button at the bottom
+5. Scroll to the bottom right to find **Buy Now**
+6. Click to select it
+
+![Installation Step 1](install1.png)
+![Installation Step 2](install2.png)
+
+### Build from Source
 
 ```bash
+git clone https://github.com/yourusername/buy-now.git
+cd buy-now
 ./build.sh
-./install.sh
+open BuyNow.saver
 ```
 
-Then:
-1. Open System Settings > Screen Saver
-2. Select "BuyNow" from the list
-3. Enjoy!
-
-### Option 2: Mac App (Easy Install/Uninstall)
-
-For a friendlier installation experience with a GUI:
-
-```bash
-./build-app.sh
-open "BuyNow Screensaver.app"
-```
-
-The app provides:
-- One-click install/uninstall
-- Live preview of the screensaver
-- Direct link to System Settings
+Then follow the installation steps above.
 
 ## Distribution
 
