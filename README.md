@@ -1,29 +1,52 @@
 # BUY NOW Screensaver
 
-A bright blue screensaver with flashing white "BUY NOW" text.
+A recreation of the classic BUY NOW screensaver by Ficus Kirkpatrick for BeOS.
 
-## Usage
-
-The video `buy-now.mp4` contains a 10-second loop of:
-- Bright blue background (#0080ff)
+Features:
+- Dark blue background (#00008B)
 - White "BUY NOW" text
-- Text flashes on/off every second
+- Flashes on/off every second
+- Native macOS screensaver (.saver bundle)
 
-### Installing as a Screensaver
+## Installation
 
-macOS doesn't natively support video screensavers directly, but you have a few options:
+### Quick Install
 
-1. **Use with a video screensaver app** like [Aerial](https://aerialscreensaver.github.io/) or similar
-2. **Use QuickTime Player** in full screen and loop mode
-3. **Convert to image sequence** and use with a screensaver that supports images
-
-### Playing the Video
-
-Simply open `buy-now.mp4` in any video player. For full-screen loop:
 ```bash
-open -a "QuickTime Player" buy-now.mp4
-# Then: View > Enter Full Screen, View > Loop
+./build.sh
+./install.sh
 ```
+
+Then:
+1. Open System Settings > Screen Saver
+2. Select "BuyNow" from the list
+3. Enjoy!
+
+### Manual Installation
+
+```bash
+# Build the screensaver
+./build.sh
+
+# Install manually
+cp -R BuyNow.saver ~/Library/Screen\ Savers/
+
+# Open System Settings > Screen Saver
+```
+
+## Sharing with Friends
+
+To share the screensaver, just zip up the `BuyNow.saver` bundle after building:
+
+```bash
+./build.sh
+zip -r BuyNow-screensaver.zip BuyNow.saver
+```
+
+Your friends can then:
+1. Unzip the file
+2. Double-click `BuyNow.saver` (or copy to `~/Library/Screen Savers/`)
+3. Select it in System Settings > Screen Saver
 
 ## About
 
