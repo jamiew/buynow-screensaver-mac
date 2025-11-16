@@ -1,16 +1,20 @@
 # BUY NOW Screensaver
 
-A recreation of the classic BUY NOW screensaver by Ficus Kirkpatrick for BeOS.
+A macOS recreation of the classic **BUY NOW** screensaver by [Ficus Kirkpatrick](http://toastycode.com/besavers/) for BeOS.
 
-Features:
-- Dark blue background (#00008B)
-- White "BUY NOW" text
+Original screensaver from the BeOS screensaver collection. This is a tribute to [BeOS](https://en.wikipedia.org/wiki/BeOS), the multithreaded operating system developed by Be Inc. in the 1990s.
+
+## Features
+
+- Dark blue background with white "BUY NOW" text
 - Flashes on/off every second
 - Native macOS screensaver (.saver bundle)
 
 ## Installation
 
-### Quick Install
+### Option 1: Screensaver Only (Lightweight)
+
+For users who just want the screensaver:
 
 ```bash
 ./build.sh
@@ -22,37 +26,54 @@ Then:
 2. Select "BuyNow" from the list
 3. Enjoy!
 
-### Manual Installation
+### Option 2: Mac App (Easy Install/Uninstall)
+
+For a friendlier installation experience with a GUI:
 
 ```bash
-# Build the screensaver
-./build.sh
-
-# Install manually
-cp -R BuyNow.saver ~/Library/Screen\ Savers/
-
-# Open System Settings > Screen Saver
+./build-app.sh
+open "BuyNow Screensaver.app"
 ```
 
-## Sharing with Friends
+The app provides:
+- One-click install/uninstall
+- Live preview of the screensaver
+- Direct link to System Settings
 
-To share the screensaver, just zip up the `BuyNow.saver` bundle after building:
+## Distribution
+
+### For GitHub Releases
 
 ```bash
+# Build everything
 ./build.sh
-zip -r BuyNow-screensaver.zip BuyNow.saver
+./build-app.sh
+./package-app.sh
 ```
 
-Your friends can then:
-1. Unzip the file
-2. Double-click `BuyNow.saver` (or copy to `~/Library/Screen Savers/`)
-3. Select it in System Settings > Screen Saver
+This creates:
+- `BuyNow-screensaver.zip` - Screensaver only (13KB)
+- `BuyNow-App.zip` - Mac app wrapper
+- `BuyNow-Screensaver-Installer.dmg` - Installer disk image
 
-## About
+### For Mac App Store
 
-This is a recreation of the classic BUY NOW screensaver by Ficus Kirkpatrick for BeOS.
+The app in `BuyNowApp/` can be submitted to the Mac App Store:
+1. Add proper code signing
+2. Add app icon assets
+3. Submit via Xcode or `xcrun altool`
 
-## Regenerating the Video
+See [Mac App Store submission guide](https://developer.apple.com/app-store/submitting/) for details.
+
+## Credits
+
+Original screensaver by [Ficus Kirkpatrick](http://toastycode.com/besavers/) for BeOS.
+
+## Video Version
+
+A video version (`buy-now.mp4`) is also included for use with video-based screensavers or just for vibes.
+
+### Regenerating the Video
 
 To create a new version with different duration or settings:
 

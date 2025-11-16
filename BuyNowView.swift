@@ -42,35 +42,22 @@ class BuyNowView: ScreenSaverView {
     }
 
     private func drawText() {
-        let fontSize: CGFloat = bounds.height * 0.12
-        let font = NSFont.boldSystemFont(ofSize: fontSize)
-
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: font,
+            .font: NSFont.boldSystemFont(ofSize: bounds.height * 0.12),
             .foregroundColor: NSColor.white
         ]
 
-        // Draw "BUY"
-        let buyText = NSAttributedString(string: "BUY", attributes: attributes)
-        let buySize = buyText.size()
-        let buyX = (bounds.width - buySize.width) / 2
-        let buyY = (bounds.height / 2) + (buySize.height * 0.6)
-        buyText.draw(at: NSPoint(x: buyX, y: buyY))
+        func drawCentered(_ text: String, yOffset: CGFloat) {
+            let attributed = NSAttributedString(string: text, attributes: attributes)
+            let size = attributed.size()
+            attributed.draw(at: NSPoint(x: (bounds.width - size.width) / 2, y: yOffset))
+        }
 
-        // Draw "NOW"
-        let nowText = NSAttributedString(string: "NOW", attributes: attributes)
-        let nowSize = nowText.size()
-        let nowX = (bounds.width - nowSize.width) / 2
-        let nowY = (bounds.height / 2) - (nowSize.height * 1.6)
-        nowText.draw(at: NSPoint(x: nowX, y: nowY))
-    }
-
-    override func animateOneFrame() {
-        // Timer handles animation, nothing needed here
-        return
+        drawCentered("BUY", yOffset: bounds.height / 2 + (bounds.height * 0.072))
+        drawCentered("NOW", yOffset: bounds.height / 2 - (bounds.height * 0.192))
     }
 
     override var hasConfigureSheet: Bool {
-        return false
+        false
     }
 }

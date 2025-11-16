@@ -1,3 +1,6 @@
 *.saver
 *.zip
+*.dmg
+*.app
 buy-now.mp4
+.DS_Store
