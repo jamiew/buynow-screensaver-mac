@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-APP_BUNDLE="BuyNow Screensaver.app"
-DMG_NAME="BuyNow-Screensaver-Installer.dmg"
-ZIP_NAME="BuyNow-App.zip"
+APP_BUNDLE="Buy Now Screensaver.app"
+DMG_NAME="Buy-Now-Screensaver-Installer.dmg"
+ZIP_NAME="Buy-Now-App.zip"
 
 if [ ! -d "${APP_BUNDLE}" ]; then
     echo "Error: ${APP_BUNDLE} not found. Run ./build-app.sh first."
@@ -21,7 +21,7 @@ echo "✓ Created ${ZIP_NAME}"
 # Optionally create a DMG (requires hdiutil)
 echo "Creating DMG installer..."
 rm -f "${DMG_NAME}"
-hdiutil create -volname "BuyNow Screensaver" \
+hdiutil create -volname "Buy Now Screensaver" \
     -srcfolder "${APP_BUNDLE}" \
     -ov -format UDZO \
     "${DMG_NAME}"
@@ -31,4 +31,4 @@ echo ""
 echo "Distribution files ready:"
 echo "  - ${ZIP_NAME} (simple download)"
 echo "  - ${DMG_NAME} (Mac installer)"
-echo "  - BuyNow-screensaver.zip (screensaver only)"
+echo "  - Buy-Now-screensaver.zip (screensaver only)"

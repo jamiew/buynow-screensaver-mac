@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-APP_NAME="BuyNow Screensaver"
-APP_BUNDLE="BuyNow Screensaver.app"
+APP_NAME="Buy Now Screensaver"
+APP_BUNDLE="Buy Now Screensaver.app"
 SCREENSAVER_NAME="BuyNow"
 
 echo "Building ${APP_NAME}..."

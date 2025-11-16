@@ -16,13 +16,13 @@ Original screensaver from the BeOS screensaver collection. This is a tribute to 
 
 ### Download
 
-**Quick install:** [Download BuyNow.saver.zip](https://github.com/yourusername/buy-now/releases) _(coming soon)_
+**Quick install:** [Download Buy Now.saver.zip](https://github.com/yourusername/buy-now/releases) _(coming soon)_
 
 **Mac App Store:** _Coming soon_
 
 ### How to Install
 
-1. Double-click `BuyNow.saver` (or download from Mac App Store when available)
+1. Double-click `Buy Now.saver` (or download from Mac App Store when available)
 2. Open **System Settings**
 3. Go to **Wallpapers**
 4. Click the **Screen Saver** button at the bottom
@@ -38,7 +38,7 @@ Original screensaver from the BeOS screensaver collection. This is a tribute to 
 git clone https://github.com/yourusername/buy-now.git
 cd buy-now
 ./build.sh
-open BuyNow.saver
+open "Buy Now.saver"
 ```
 
 Then follow the installation steps above.
@@ -55,9 +55,9 @@ Then follow the installation steps above.
 ```
 
 This creates:
-- `BuyNow-screensaver.zip` - Screensaver only (13KB)
-- `BuyNow-App.zip` - Mac app wrapper
-- `BuyNow-Screensaver-Installer.dmg` - Installer disk image
+- `Buy-Now-screensaver.zip` - Screensaver only (13KB)
+- `Buy-Now-App.zip` - Mac app wrapper
+- `Buy-Now-Screensaver-Installer.dmg` - Installer disk image
 
 ### For Mac App Store
 
