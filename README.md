@@ -4,7 +4,7 @@ A macOS recreation of the classic **BUY NOW** screensaver by [Ficus Kirkpatrick]
 
 Original screensaver from the BeOS screensaver collection. This is a tribute to [BeOS](https://en.wikipedia.org/wiki/BeOS), the multithreaded operating system developed by Be Inc. in the 1990s.
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.gif)
 
 ## Features
 
