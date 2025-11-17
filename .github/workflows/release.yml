@@ -1,0 +1,58 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build screensaver
+      run: ./build.sh
+
+    - name: Create screensaver zip
+      run: |
+        cd "Buy Now.saver/.."
+        zip -r ../Buy-Now-screensaver.zip "Buy Now.saver"
+        cd ..
+
+    - name: Build app
+      run: ./build-app.sh
+
+    - name: Package app
+      run: ./package-app.sh
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          Buy-Now-screensaver.zip
+          Buy-Now-App.zip
+          Buy-Now-Screensaver-Installer.dmg
+        body: |
+          ## Buy Now Screensaver
+
+          A recreation of the classic BeOS BUY NOW screensaver for macOS.
+
+          ### Downloads
+
+          - **Buy-Now-screensaver.zip** - Screensaver only (13KB) - Just double-click to install
+          - **Buy-Now-App.zip** - Mac app with GUI installer
+          - **Buy-Now-Screensaver-Installer.dmg** - Disk image installer
+
+          ### Installation
+
+          1. Download `Buy-Now-screensaver.zip`
+          2. Unzip and double-click `Buy Now.saver`
+          3. Open System Settings > Wallpapers > Screen Saver
+          4. Scroll to bottom right and select "Buy Now"
+
+          See the [README](https://github.com/jamiew/buynow-screensaver-mac) for details.
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

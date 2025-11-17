@@ -15,7 +15,7 @@ It is a wonderful piece of computing history.
 
 ### Download
 
-**Quick install:** [Download Buy Now.saver.zip](https://github.com/yourusername/buy-now/releases) _(coming soon)_
+**Quick install:** [Download Buy-Now-screensaver.zip](https://github.com/jamiew/buynow-screensaver-mac/releases/latest)
 
 **Mac App Store:** _Coming soon_
 
@@ -34,8 +34,8 @@ It is a wonderful piece of computing history.
 ### Build from Source
 
 ```bash
-git clone https://github.com/yourusername/buy-now.git
-cd buy-now
+git clone https://github.com/jamiew/buynow-screensaver-mac.git
+cd buynow-screensaver-mac
 ./build.sh
 open "Buy Now.saver"
 ```
@@ -44,19 +44,24 @@ Then follow the installation steps above.
 
 ## Distribution
 
-### For GitHub Releases
+### Creating a Release
+
+Releases are automated via GitHub Actions:
 
 ```bash
-# Build everything
-./build.sh
-./build-app.sh
-./package-app.sh
+./release.sh v1.0.0
 ```
 
-This creates:
-- `Buy-Now-screensaver.zip` - Screensaver only (13KB)
-- `Buy-Now-App.zip` - Mac app wrapper
-- `Buy-Now-Screensaver-Installer.dmg` - Installer disk image
+This automatically:
+1. Updates version numbers
+2. Creates git tag
+3. Triggers GitHub Actions to build and package
+4. Publishes to [GitHub Releases](https://github.com/jamiew/buynow-screensaver-mac/releases)
+
+Assets created:
+- `Buy-Now-screensaver.zip` - Screensaver only (~13KB)
+- `Buy-Now-App.zip` - Mac app installer
+- `Buy-Now-Screensaver-Installer.dmg` - Disk image
 
 ### For Mac App Store
 
