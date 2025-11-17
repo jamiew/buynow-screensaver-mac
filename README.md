@@ -2,7 +2,7 @@
 
 A macOS recreation of the classic **BUY NOW** screensaver by [Ficus Kirkpatrick](http://toastycode.com/besavers/) for BeOS.
 
-It has a dark blue background and white text.
+It has a dark blue background and flashing white text.
 
 
 ![Screenshot](screenshot.gif)
